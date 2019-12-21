@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
-const routes: Routes = [];
+const routes: Routes = [{ path: 'scroll', loadChildren: () => import('./scroll/scroll.module').then(m => m.ScrollModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
